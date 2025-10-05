@@ -18,13 +18,17 @@ public class ThreeSum {
 					Collections.sort(temp);
 					hs.add(temp);
 				}
-				h.add(arr[i]);
+				h.add(arr[j]);
 			}
 			
 		}
 		ArrayList<ArrayList<Integer>> ans = new ArrayList<>(hs);	
 		return ans;
 	}
+//	[-1, -1, 2]
+//			[-2, 0, 2]
+//			[0, 0, 0]
+
 	
 	public static void main(String[] args) {
 		int[] arr = {-2,-2,-1,-1,-1,0,0,0,2,2,2,2};
