@@ -10,6 +10,8 @@ public class FibByRec {
 		return fib(n-2)+fib(n-1);
 	}
 	
+	
+	//Memoization O(n)
 	public static int fibByTab(int n) {
 		long fib = 0;
 		
