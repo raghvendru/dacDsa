@@ -10,7 +10,7 @@ public class QuickSort {
 	}
 	
 	public static void qsHelper(int[] nums,int l,int h) {
-		if(l>h) return;
+		if(l>=h) return;
 			int pi = pivot(nums,l,h);
 			qsHelper(nums,l,pi-1);
 			qsHelper(nums,pi+1,h);
@@ -23,8 +23,8 @@ public class QuickSort {
 		int i = l;
 		int j = h;
 		while(i<j) {
-			if(i<=h-1 && nums[i]<=pivot) i++;
-			if(j>=l+1 && nums[i]>pivot) j--;
+			while(i<=h-1 && nums[i]<=pivot) i++;
+			while(j>=l+1 && nums[j]>pivot) j--;
 			
 			if(i<j) {
 				int temp = nums[i];
@@ -32,11 +32,12 @@ public class QuickSort {
 				nums[j] = temp;
 				
 			}
-			int temp = nums[l];
-			nums[l] = nums[j];
-			nums[j] = temp;
+			
 			
 		}
+		int temp = nums[l];
+		nums[l] = nums[j];
+		nums[j] = temp;
 		return j;
 	}
 
