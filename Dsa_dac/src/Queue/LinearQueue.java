@@ -18,7 +18,7 @@ public class LinearQueue {
         }
         arr[++rear] = item;
     }
-
+i
     public void dequeue() {
         if (isEmpty()) {
             System.out.println("Queue underflow");

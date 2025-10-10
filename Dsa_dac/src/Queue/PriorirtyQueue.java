@@ -17,7 +17,6 @@ public class PriorirtyQueue {
         }
 
         int i;
-        // Insert in sorted order (ascending)
         for (i = size - 1; i >= 0 && arr[i] > item; i--) {
             arr[i + 1] = arr[i];
         }
